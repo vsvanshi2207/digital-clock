@@ -15,3 +15,24 @@ function updateClock() {
 // Update every second
  setInterval(updateClock, 1000);
 updateClock();
+
+let darktheme = true;
+
+function toggleTheme(){
+  darktheme = !darktheme;
+  if(!darktheme){
+    document.body.style.backgroundColor = "white"
+    document.body.style.color = "black"
+  }else{
+    document.body.style.backgroundColor = "black"
+    document.body.style.color = "white"
+  }
+}
+
+toggleTheme(); // Set initial theme
+
+document.getElementById('theme-toggle').addEventListener('click', ()=>{
+  //darktheme = !darktheme;
+  toggleTheme();
+});
+
